@@ -1,20 +1,12 @@
-.PHONY: run lock install migrate upgrade activate
-
-# Starts the development server
-activate:
-	source .venv/bin/activate
+.PHONY: run install migrate upgrade
 
 # Starts the development server
 run:
 	uvicorn --app-dir src learnage.main:app --reload
 
-# Generates a requirements.txt lock file from pyproject.toml
-lock:
-	uv pip compile pyproject.toml -o requirements.txt
-
-# Installs dependencies from the lock file
+# Installs dependencies from the uv.lock file
 install:
-	uv pip install -r requirements.txt
+	uv sync
 
 # Generates a new database migration file
 # Usage: make migrate m="your migration message"
@@ -28,4 +20,3 @@ migrate:
 # Applies all pending migrations to the database
 upgrade:
 	alembic upgrade head
-
