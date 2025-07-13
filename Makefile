@@ -1,4 +1,8 @@
-.PHONY: run lock install migrate upgrade
+.PHONY: run lock install migrate upgrade activate
+
+# Starts the development server
+activate:
+	source .venv/bin/activate
 
 # Starts the development server
 run:
@@ -10,7 +14,7 @@ lock:
 
 # Installs dependencies from the lock file
 install:
-	uv pip sync -r requirements.txt
+	uv pip install -r requirements.txt
 
 # Generates a new database migration file
 # Usage: make migrate m="your migration message"

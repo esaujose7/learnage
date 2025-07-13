@@ -9,4 +9,5 @@ dependencies = [
     "uvicorn[standard]",
     "sqlalchemy",
     "alembic",
+    "pydantic-settings",
 ]
