@@ -2,7 +2,7 @@
 
 # Starts the development server
 run:
-	uvicorn --app-dir src learnage.main:app --reload
+	uvicorn learnage.main:app --reload
 
 # Installs dependencies from the uv.lock file
 install:
