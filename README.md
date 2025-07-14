@@ -2,7 +2,7 @@
 
 A simple FastAPI application for managing notes, built with Python, SQLAlchemy, and Alembic.
 
-This project is structured following the `src` layout and uses `uv` for package management and a `Makefile` for running common development tasks.
+This project is structured following the `package` layout and uses `uv` for package management and a `Makefile` for running common development tasks.
 
 ## Getting Started
 
@@ -69,7 +69,7 @@ The API will be available at `http://127.0.0.1:8000`.
 -   **To install dependencies after a pull:** `make install`
 
 ### Database Migrations
-When you change a model in `src/learnage/models/`, you must create a new migration and apply it.
+When you change a model in `learnage/models/`, you must create a new migration and apply it.
 
 1.  **Generate the migration file:**
     ```bash
