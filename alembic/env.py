@@ -10,7 +10,7 @@ config = context.config
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
-from learnage.models import Base
+from learnage.clients.database import Base
 from learnage.config import settings
 
 target_metadata = Base.metadata
